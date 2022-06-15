@@ -26,7 +26,7 @@ class Author(db.Model):
       self.name = name
       self.surname = surname
    
-   def __str__(self):
+   def __repr__(self):
       return f"{self.name}{self.surname}"
 
 class Acess(db.Model):
@@ -40,7 +40,7 @@ class Acess(db.Model):
       self.return_date="Nie oddana"
       self.book_id=book_id
    
-   def __str__(self):
+   def __repr__(self):
       return f"{self.id}{self.borrow_date}{self.return_date}{self.book_id}"
    
 
@@ -57,7 +57,7 @@ class Book(db.Model):
       self.gnere = gnere
       self.status = status
    
-   def __str__(self):
+   def __repr__(self):
       return f'{self.title}'
 
 @app.route('/')
